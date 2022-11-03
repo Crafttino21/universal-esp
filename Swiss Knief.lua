@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Project X by WeepingAngel", "BloodTheme")
+local Window = Library.CreateLib("Swiss Knief PRX by WeepingAngel", "BloodTheme")
 
 local Main = Window:NewTab("Universal")
 local MainSection = Main:NewSection("Universal")
