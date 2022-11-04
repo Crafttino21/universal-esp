@@ -102,6 +102,7 @@ MiscSection:NewButton("Crash Server", "Try to Crash the Server. Its Realy basic,
     print("Attack Sended!")
 end)
 
+
 local Protection = Window:NewTab("Protections")
 local ProtectionSection = Protection:NewSection("Protections")
 
@@ -123,9 +124,13 @@ ProtectionSection:NewToggle("Block Anti Cheat", "Try to block some anticheat che
         print(banner)
         print("Scanning for Anti Cheat...")
         print("Try to Block checks...")
+        print("Run Local Side Remover...")
         print("Bypass looks successfully, Use with care!")
     else
         print(banner)
         print("Bring everything back to normal...")
     end
+end)
+ProtectionSection:NewButton("PANIC", "Lets you disconnect from the Game!", function()
+    loadstring(game.Players.LocalPlayer:Kick("[PRX] PANIC BUTTON PRESSED!!!"))()
 end)
